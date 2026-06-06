@@ -106,25 +106,20 @@
   .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem;text-align:center}
   .stat .n{font-size:2rem;font-weight:700;color:var(--sky);display:block}
   .stat .l{font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
-  .leaderboard{width:100%;border-collapse:collapse;font-size:.93rem;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
-  .leaderboard th,.leaderboard td{padding:.55rem .8rem;border-bottom:1px solid var(--line);text-align:left}
-  .leaderboard th{background:var(--ink);color:#fff;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px}
-  .leaderboard tr:last-child td{border-bottom:none}
-  .bar{display:inline-block;height:8px;background:var(--sun);border-radius:4px;vertical-align:middle;margin-right:.5rem}
-
-  @media (max-width:600px){
-    .vote-controls{position:static}
-    nav a{padding:.4rem .6rem;font-size:.85rem}
-  }
+  .leaderboard{width:100%;border-collapse:collapse;font-size:.93rem;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin:1rem 0}
+  .leaderboard th,.leaderboard td{padding:.55rem .75rem;text-align:left;border-bottom:1px solid var(--line)}
+  .leaderboard th{background:#f7f1de;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+  .bar{display:inline-block;height:10px;background:var(--grass);border-radius:5px;vertical-align:middle;margin-right:.4rem}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#home"><span class="ball"></span> World Cup @ YS</a>
+    <a href="#home" class="brand"><span class="ball"></span> World Cup @ YS</a>
     <nav>
       <ul>
         <li><a href="#home" data-route="home">Home</a></li>
@@ -138,239 +133,228 @@
 
 <main>
 
-<!-- ============ HOME ============ -->
-<section id="home" class="page active">
+<!-- HOME -->
+<section id="page-home" class="page">
   <div class="hero">
     <span class="kicker">Summer 2026 · Yellow Springs, Ohio</span>
-    <h1>The World Comes to Yellow Springs</h1>
-    <p class="lead">A community-built watch party series for the 2026 FIFA World Cup — under the trees by the Bryan Center, with neighbors, kids, food, music, and 48 nations on one big screen.</p>
+    <h1>The World, Together,<br>In Downtown YS.</h1>
+    <p class="lead">Free community watch parties for the 2026 FIFA World Cup, projected on a big screen by the Bryan Center. 48 nations. 104 matches. One village.</p>
     <div class="btn-row">
       <a href="#vote" class="btn">Vote on Games</a>
-      <a href="#volunteer" class="btn secondary">Volunteer</a>
-      <a href="#party" class="btn ghost">About the Party</a>
+      <a href="#volunteer" class="btn ghost">Volunteer</a>
     </div>
-    <div class="flags">🇺🇸 🇲🇽 🇨🇦 🇧🇷 🇦🇷 🇫🇷 🇩🇪 🇪🇸 🇯🇵 🇰🇷 🇳🇬 🇸🇳 🇲🇦 🇮🇹 🇵🇹 🇳🇱 🇧🇪 🇭🇷 🇨🇭 🇺🇾</div>
+    <div class="flags">🇲🇽 🇨🇦 🇺🇸 🇧🇷 🇦🇷 🇫🇷 🇩🇪 🇪🇸 🇳🇬 🇯🇵 🇲🇦 🇸🇳 🇰🇷 🇳🇱 🇺🇾 🇵🇹 🇮🇹 🇬🇭 🇪🇬 🇮🇷</div>
   </div>
 
   <div class="container">
-    <div class="grid cols-3" style="margin-top:2.5rem">
+    <h2>What is this?</h2>
+    <p>The 2026 men's World Cup is the biggest ever — 48 teams, hosted across the US, Canada, and Mexico. <strong>World Cup @ YS</strong> is a grassroots effort to bring Yellow Springs together to watch it, on a big outdoor screen, near the Bryan Center, all summer long.</p>
+    <p>We're in the planning phase right now. Three ways you can help shape it:</p>
+
+    <div class="grid cols-3" style="margin-top:1.5rem">
       <div class="card">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=70" alt="Crowd watching football on a big screen">
-        <h3>🎉 The Party</h3>
-        <p>Group-stage matches will be cozy daytime hangs. Knockout rounds turn into full block parties — potluck, DJ, kids' zone, dance floor.</p>
-        <a href="#party">See the vision →</a>
+        <img class="feature-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=70" alt="Crowd watching football on a big screen">
+        <h3>1. The Party</h3>
+        <p>Group stage = casual drop-in. Knockouts = potluck, DJ, kids zone, dance party. Read the full vision.</p>
+        <a href="#party" class="btn secondary">See the plan →</a>
       </div>
       <div class="card">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=900&q=70" alt="Football fans cheering">
-        <h3>🗳️ Vote on Games</h3>
-        <p>We can't screen all 72 group-stage games. Tell us which matches matter to you — every voter gets 10 points to spread around.</p>
-        <a href="#vote">Cast your votes →</a>
+        <img class="feature-img" src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=800&q=70" alt="Soccer ball on grass">
+        <h3>2. Vote on Games</h3>
+        <p>We can't screen all 72 group-stage matches. Tell us which ones <em>your</em> Yellow Springs should see.</p>
+        <a href="#vote" class="btn secondary">Cast your votes →</a>
       </div>
       <div class="card">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=900&q=70" alt="Volunteers organizing an event">
-        <h3>🙋 Volunteer</h3>
-        <p>This is a village production. We need help with permits, screen setup, cleanup, kids activities, music, food coordination — pick a role.</p>
-        <a href="#volunteer">Sign up →</a>
+        <img class="feature-img" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=70" alt="People celebrating together">
+        <h3>3. Volunteer</h3>
+        <p>Screen setup, cleanup, calls for permits, kids activities, DJ help. An hour or a season — every bit helps.</p>
+        <a href="#volunteer" class="btn secondary">Sign up →</a>
       </div>
     </div>
   </div>
 
   <div class="stripe">
     <div class="container">
-      <h2 style="margin-top:0">A Tournament Almost a Century Old</h2>
-      <p>The FIFA World Cup has been bringing the planet together since <strong>Uruguay 1930</strong> — 13 teams in Montevideo, hand-stitched leather balls, and a final watched by 68,000 people. Ninety-six years later, the tournament arrives on our doorstep: <strong>48 nations</strong>, three host countries (USA, Mexico, Canada), and matches in Cincinnati just up the road. From Pelé's barefoot childhood in Bauru to Maradona's "Hand of God," from the Miracle of Bern to Mbappé's hat-trick — every World Cup writes a new chapter in the only story the whole world reads at once. We want Yellow Springs to be part of that story.</p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="grid cols-2">
-      <div>
-        <h2>Why Yellow Springs?</h2>
-        <p>Because this village already knows how to throw a street party. Because we have a lawn by the Bryan Center, a community that shows up, and a soft spot for any event involving potluck. Because soccer is — finally and undeniably — an American sport too, and our kids deserve to grow up remembering where they watched the goals.</p>
-        <p>This is grassroots. Not for profit. Built by neighbors.</p>
-      </div>
-      <div>
-        <img class="feature-img" style="height:280px" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=70" alt="Soccer ball in net">
-      </div>
+      <h2 style="margin-top:0">A 96-Year Global Tradition</h2>
+      <p>The FIFA World Cup has been played since 1930 — through wars, recessions, and revolutions. From Uruguay's first triumph in Montevideo to Maradona's "Hand of God" in Mexico City, from Zinedine Zidane's headbutt in Berlin to Messi's coronation in Lusail — the tournament is, for one month every four years, the closest thing humanity has to a shared experience.</p>
+      <p>In 2026 it comes to North America for the third time. And for the first time, it sprawls across three host countries and 48 nations. Yellow Springs is going to feel it too.</p>
+      <div class="flags">🏆 1930 🇺🇾 · 1950 🇧🇷 · 1966 🏴󠁧󠁢󠁥󠁮󠁧󠁿 · 1970 🇧🇷 · 1986 🇦🇷 · 1998 🇫🇷 · 2002 🇧🇷 · 2014 🇩🇪 · 2018 🇫🇷 · 2022 🇦🇷 · 2026 ???</div>
     </div>
   </div>
 </section>
 
-<!-- ============ PARTY ============ -->
-<section id="party" class="page">
+<!-- PARTY -->
+<section id="page-party" class="page">
   <div class="container">
-    <h1>The Watch Party</h1>
-    <p style="font-size:1.15rem;max-width:720px">Two tiers of gathering. Mellow daytime watches for the group stage. Full-village blowouts for the knockouts.</p>
+    <h1>The Party</h1>
+    <p class="lead" style="font-size:1.15rem;color:var(--muted)">Two different vibes for two different stages of the tournament — both centered downtown, near the Bryan Center.</p>
 
-    <img class="feature-img" style="height:320px" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=70" alt="Outdoor watch party crowd">
+    <img class="feature-img" style="height:320px" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=70" alt="Outdoor watch party with screen">
 
-    <h2>📍 The Location</h2>
-    <p>We're aiming to set up by the <strong>Bryan Community Center</strong> in downtown Yellow Springs — the lawn gives us shade, the building gives us power and bathrooms, and downtown gives us walk-up neighbors. (Pending village approval — see the Volunteer page if you can help with that conversation.)</p>
+    <h2>Where</h2>
+    <p>We're aiming for the green space by the <strong>Bryan Community Center</strong> in downtown Yellow Springs — central, walkable, family-friendly, and big enough to handle a real crowd. Final location pending permits and a few key phone calls (👀 see the Volunteer page).</p>
 
-    <h2>🥣 Group Stage — Daytime Hangs</h2>
-    <p>From <strong>June 11 through June 27</strong>, the group stage runs 72 matches over 17 days. We'll pick a curated handful — guided by your votes — and show them as low-key community watches. Bring a chair, bring snacks, stick around or drop in. Coffee in the morning, cold drinks in the afternoon.</p>
-
-    <h2>🎉 Knockouts — The Big Parties</h2>
-    <p>Starting with the <strong>Round of 32 (June 28)</strong> and especially from the <strong>Quarterfinals (July 9–11)</strong> onward, we go big:</p>
-    <div class="pillars">
-      <div class="pillar"><span class="emoji">🍲</span><strong>Potluck</strong><p class="small">Bring a dish from your favorite country still in it.</p></div>
-      <div class="pillar"><span class="emoji">🧒</span><strong>Kids Zone</strong><p class="small">Face painting, mini-pitch, flag crafts, sidewalk chalk.</p></div>
-      <div class="pillar"><span class="emoji">🎧</span><strong>DJ Set</strong><p class="small">Pre-match warm-up and full-throttle post-match dance party.</p></div>
-      <div class="pillar"><span class="emoji">💃</span><strong>Dance Floor</strong><p class="small">Win or lose, we celebrate. Cumbia, samba, afrobeats, everything.</p></div>
+    <h2>Two Phases, One Summer</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Group Stage · June 11–27</h3>
+        <p><strong>Casual drop-in viewing.</strong> Big screen up, blankets and lawn chairs welcome, a few games per day. Bring your own snacks, a kid, a dog, a neighbor. Low key. Come and go.</p>
+        <p class="small">We'll screen the matches the community votes for — head to the <a href="#vote">Vote</a> page to pick yours.</p>
+      </div>
+      <div class="card">
+        <h3>Knockouts · June 28 → July 19</h3>
+        <p><strong>The full party.</strong> Quarterfinals, semis, and the final get the works:</p>
+        <ul>
+          <li>🍲 <strong>Potluck</strong> — bring a dish from somewhere on the map</li>
+          <li>🎧 <strong>DJ + dance party</strong> before and after the match</li>
+          <li>🎨 <strong>Kids zone</strong> — face paint, mini-pitch, crafts</li>
+          <li>📺 <strong>Big screen</strong> with proper sound</li>
+        </ul>
+      </div>
     </div>
 
-    <h2>🗓️ Dates to Hold</h2>
+    <h2>What We're Building Around</h2>
+    <div class="pillars">
+      <div class="pillar"><span class="emoji">🌍</span><strong>Global</strong><div class="small">48 nations, every continent</div></div>
+      <div class="pillar"><span class="emoji">🏘️</span><strong>Local</strong><div class="small">Bryan Center, downtown YS</div></div>
+      <div class="pillar"><span class="emoji">🆓</span><strong>Free</strong><div class="small">No tickets, no cover</div></div>
+      <div class="pillar"><span class="emoji">👨‍👩‍👧</span><strong>For everyone</strong><div class="small">Kids welcome, all ages</div></div>
+    </div>
+
+    <h2>Key Dates</h2>
     <ul>
-      <li><strong>Thu Jun 11</strong> — Opening match (Mexico City)</li>
-      <li><strong>Jun 11 – Jun 27</strong> — Group stage (72 games, we screen a chosen few)</li>
-      <li><strong>Jun 28 – Jul 3</strong> — Round of 32</li>
-      <li><strong>Jul 4 – Jul 7</strong> — Round of 16</li>
-      <li><strong>Jul 9 – Jul 11</strong> — <strong>Quarterfinals → first big party</strong></li>
-      <li><strong>Jul 14 & 15</strong> — Semifinals</li>
-      <li><strong>Sat Jul 18</strong> — Third place match</li>
-      <li><strong>Sun Jul 19</strong> — <strong>FINAL</strong> at MetLife Stadium, NJ</li>
+      <li><strong>June 11</strong> — Opening match: Mexico vs. South Africa at Estadio Azteca</li>
+      <li><strong>June 11–27</strong> — Group stage (72 matches)</li>
+      <li><strong>June 28 – July 3</strong> — Round of 32 (new this year!)</li>
+      <li><strong>July 4–7</strong> — Round of 16</li>
+      <li><strong>July 9–11</strong> — Quarterfinals 🎉 <em>full party mode begins</em></li>
+      <li><strong>July 14–15</strong> — Semifinals</li>
+      <li><strong>July 19</strong> — The Final, at MetLife Stadium</li>
     </ul>
 
-    <div class="notice">
-      <strong>Heads up:</strong> Final date, location, and screening list all depend on village permits, weather, and volunteer power. Sign up to help and we'll keep you in the loop.
-    </div>
-
-    <div class="btn-row" style="margin-top:1.5rem;justify-content:flex-start">
-      <a href="#vote" class="btn">Vote on Games</a>
-      <a href="#volunteer" class="btn secondary">I want to help</a>
+    <div class="btn-row" style="justify-content:flex-start;margin-top:2rem">
+      <a href="#volunteer" class="btn">Help Make It Happen</a>
+      <a href="#vote" class="btn secondary">Vote on Games</a>
     </div>
   </div>
 </section>
 
-<!-- ============ VOTE ============ -->
-<section id="vote" class="page">
+<!-- VOTE -->
+<section id="page-vote" class="page">
   <div class="container">
     <h1>Vote on Games</h1>
-    <p>Help us choose which group-stage matches to screen. <strong>Enter your name, get 10 voting points</strong>, then spread them across the matches you most want to watch. You can put multiple points on a single match. Honor system — be cool, you only need to vote once.</p>
+    <p class="lead" style="font-size:1.1rem;color:var(--muted)">We can't screen everything. Help us prioritize the group stage. Enter your name, get <strong>10 voting points</strong>, and spend them however you want — all 10 on one game, or 1 each on ten games. Your call.</p>
 
-    <div class="notice">All times shown are <strong>Eastern Time (ET)</strong>. Group stage runs June 11–27, 2026.</div>
+    <div class="notice"><strong>Honor system.</strong> No login, no email. Just enter your name. Your budget is tracked by name on our server, so it works across devices — and so does everyone else's. Live community totals shown next to each match.</p></div>
 
     <div class="vote-controls">
       <div>
         <label for="voter-name" style="margin-bottom:.2rem;font-size:.85rem">Your name</label>
-        <input type="text" id="voter-name" class="name-input" placeholder="e.g. Maria from Xenia Ave" autocomplete="off" />
+        <input id="voter-name" class="name-input" type="text" placeholder="e.g. Maria from Xenia Ave" maxlength="60" autocomplete="off">
       </div>
       <div>
-        <span class="points-badge"><span id="points-left">10</span> / 10 points left</span>
-        <button class="btn secondary" id="reset-btn" style="padding:.5rem 1rem;font-size:.85rem;margin-left:.5rem">Switch voter</button>
+        <span class="points-badge" id="points-badge">10 points left</span>
+        <span id="vote-status" class="small" style="margin-left:.5rem"></span>
       </div>
     </div>
 
-    <div id="vote-status" class="error" style="display:none"></div>
-    <div id="loading-status" style="text-align:center;padding:2rem;color:var(--muted)"><span class="spinner"></span> Loading current vote totals…</div>
+    <div id="error-box"></div>
 
-    <div id="matches-container"></div>
+    <div id="schedule-container"></div>
 
-    <p class="small" style="margin-top:2rem">Vote totals are stored on Cloudflare and shared across all visitors. Updated live as people vote.</p>
+    <p class="small" style="margin-top:2rem">Schedule shown in <strong>Eastern Time</strong>. Final group-stage matchdays (June 24–27) have both group games at the same time — that's a FIFA rule for fairness. Confirmed teams and venues per FIFA's post-draw schedule.</p>
   </div>
 </section>
 
-<!-- ============ VOLUNTEER ============ -->
-<section id="volunteer" class="page">
+<!-- VOLUNTEER -->
+<section id="page-volunteer" class="page">
   <div class="container">
     <h1>Volunteer</h1>
-    <p>This event runs on neighbor-power. Tell us how you can help and we'll be in touch. Submissions email straight to the organizers.</p>
+    <p class="lead" style="font-size:1.1rem;color:var(--muted)">This whole thing only happens if people pitch in. Tell us how you can help and we'll be in touch with details as plans firm up.</p>
 
-    <div id="vol-success" class="success">✅ Thanks! We got your info and will reach out soon.</div>
+    <div class="success" id="vol-success">
+      🎉 <strong>Thanks!</strong> Your info is on its way. We'll be in touch soon. (First-time note: the very first form submission triggers a one-time confirmation email — check your inbox if you don't hear back.)
+    </div>
 
     <form class="vol" id="vol-form" action="https://formsubmit.co/mazursky@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New World Cup @ YS volunteer signup!">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://worldcupys.pages.dev/?signup=ok#volunteer">
+      <input type="hidden" name="_next" value="https://worldcupys.example/#volunteer?ok=1">
+      <input type="text" name="_honey" style="display:none">
 
       <div>
-        <label for="vname">Name *</label>
-        <input type="text" id="vname" name="name" required>
+        <label for="name">Your name *</label>
+        <input id="name" type="text" name="Name" required>
       </div>
       <div>
-        <label for="vemail">Email *</label>
-        <input type="email" id="vemail" name="email" required>
+        <label for="email">Email *</label>
+        <input id="email" type="email" name="Email" required>
       </div>
       <div>
-        <label for="vphone">Phone (optional)</label>
-        <input type="tel" id="vphone" name="phone">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" type="tel" name="Phone">
       </div>
 
       <div>
-        <label>How would you like to help? (pick any)</label>
+        <label>Where can you help? (check all that apply)</label>
         <div class="checks">
-          <label><input type="checkbox" name="tasks" value="Permits & village permission calls"> Permits & calls for event permission</label>
-          <label><input type="checkbox" name="tasks" value="Screen / AV setup"> Setting up the screen & AV</label>
-          <label><input type="checkbox" name="tasks" value="Teardown & cleanup"> Teardown & cleanup</label>
-          <label><input type="checkbox" name="tasks" value="Potluck coordination"> Potluck coordination</label>
-          <label><input type="checkbox" name="tasks" value="Kids activities"> Kids activities</label>
-          <label><input type="checkbox" name="tasks" value="DJ / music"> DJ / music</label>
-          <label><input type="checkbox" name="tasks" value="Promotion & flyers"> Promotion & flyers</label>
-          <label><input type="checkbox" name="tasks" value="Fundraising / sponsors"> Fundraising / sponsors</label>
-          <label><input type="checkbox" name="tasks" value="Day-of greeting & seating"> Day-of greeting & seating</label>
-          <label><input type="checkbox" name="tasks" value="Wherever needed"> Wherever you need me</label>
+          <label><input type="checkbox" name="Task: Screen setup" value="yes">📺 Setting up the screen & projector</label>
+          <label><input type="checkbox" name="Task: Cleanup" value="yes">🧹 Cleanup after events</label>
+          <label><input type="checkbox" name="Task: Permits & calls" value="yes">📞 Making calls for event permits</label>
+          <label><input type="checkbox" name="Task: Bryan Center liaison" value="yes">🏛️ Bryan Center / Village liaison</label>
+          <label><input type="checkbox" name="Task: DJ" value="yes">🎧 DJ-ing or sound</label>
+          <label><input type="checkbox" name="Task: Kids zone" value="yes">🎨 Running kids activities</label>
+          <label><input type="checkbox" name="Task: Potluck coord" value="yes">🍲 Potluck coordination</label>
+          <label><input type="checkbox" name="Task: Promo / flyers" value="yes">📣 Promo, social media, flyers</label>
+          <label><input type="checkbox" name="Task: Sponsors" value="yes">💰 Recruiting sponsors / fundraising</label>
+          <label><input type="checkbox" name="Task: Day-of helper" value="yes">🙋 General day-of helper</label>
+          <label><input type="checkbox" name="Task: Other" value="yes">✨ Something else (tell us below)</label>
         </div>
       </div>
 
       <div>
-        <label for="vavail">When are you available?</label>
-        <select id="vavail" name="availability">
-          <option value="">— choose —</option>
-          <option>Planning phase (now through June)</option>
-          <option>Group stage only (Jun 11–27)</option>
-          <option>Knockouts only (Jun 28–Jul 19)</option>
-          <option>Whole tournament</option>
-          <option>Final weekend only (Jul 18–19)</option>
+        <label for="avail">When are you available?</label>
+        <select id="avail" name="Availability">
+          <option value="">— pick one —</option>
+          <option>Group stage (June 11–27)</option>
+          <option>Knockouts only (June 28 – July 19)</option>
+          <option>Both, whenever needed</option>
+          <option>Flexible / weekends</option>
+          <option>Just one or two events</option>
         </select>
       </div>
 
       <div>
-        <label for="vnotes">Anything else?</label>
-        <textarea id="vnotes" name="notes" placeholder="Skills, equipment you can bring, country you're rooting for…"></textarea>
+        <label for="msg">Anything else? Skills, ideas, questions?</label>
+        <textarea id="msg" name="Notes" placeholder="e.g. I have a PA system / I speak Portuguese / I know someone who has a popcorn machine…"></textarea>
       </div>
 
-      <div>
-        <button type="submit" class="btn">Sign me up</button>
-        <span class="small" style="margin-left:.6rem">Goes straight to mazursky@gmail.com</span>
-      </div>
+      <button type="submit" class="btn" style="justify-self:start">Send it 🚀</button>
+      <p class="small">Your info goes straight to mazursky@gmail.com via FormSubmit. No data is stored on this site.</p>
     </form>
   </div>
 </section>
 
-<!-- ============ ADMIN (hidden, accessed via #admin) ============ -->
-<section id="admin" class="page">
+<!-- ADMIN (hidden from nav) -->
+<section id="page-admin" class="page">
   <div class="container">
     <h1>Admin · Vote Results</h1>
-
-    <div id="admin-login" style="max-width:420px">
-      <p>Enter the admin key to view live vote results.</p>
-      <div id="admin-error" class="error" style="display:none"></div>
-      <input type="password" id="admin-key-input" placeholder="admin key" autocomplete="off">
-      <button class="btn" id="admin-login-btn" style="margin-top:.75rem">Unlock</button>
+    <div id="admin-login">
+      <p>Enter the admin key:</p>
+      <form id="admin-login-form" style="display:flex;gap:.5rem;max-width:420px">
+        <input type="password" id="admin-key" placeholder="admin key" autocomplete="off" style="flex:1">
+        <button type="submit" class="btn">Unlock</button>
+      </form>
+      <div id="admin-error"></div>
     </div>
-
     <div id="admin-content" style="display:none">
-      <div class="admin-grid">
-        <div class="stat"><span class="n" id="stat-voters">0</span><span class="l">Voters</span></div>
-        <div class="stat"><span class="n" id="stat-votes">0</span><span class="l">Votes cast</span></div>
-        <div class="stat"><span class="n" id="stat-matches">0</span><span class="l">Matches w/ votes</span></div>
-        <div class="stat"><button class="btn secondary" id="admin-refresh" style="width:100%">Refresh</button></div>
-      </div>
-
-      <h2>Leaderboard — most-wanted matches</h2>
-      <table class="leaderboard" id="leaderboard">
-        <thead><tr><th>#</th><th>Match</th><th>Votes</th></tr></thead>
-        <tbody></tbody>
-      </table>
-
+      <div class="admin-grid" id="admin-stats"></div>
+      <h2>Match Leaderboard</h2>
+      <div id="admin-leaderboard"></div>
       <h2>Voters</h2>
-      <table class="leaderboard" id="voter-list">
-        <thead><tr><th>Name</th><th>Points used</th><th>Last vote</th></tr></thead>
-        <tbody></tbody>
-      </table>
-
-      <p class="small" style="margin-top:1rem"><a href="#" id="admin-logout">Lock admin</a></p>
+      <div id="admin-voters"></div>
+      <p style="margin-top:1.5rem"><button class="btn secondary" id="admin-refresh">🔄 Refresh</button> <button class="btn secondary" id="admin-logout">Log out</button></p>
     </div>
   </div>
 </section>
@@ -378,401 +362,360 @@
 </main>
 
 <footer>
-  <p><strong>World Cup @ YS</strong> · A grassroots community project in Yellow Springs, Ohio</p>
-  <p>Questions? <a href="mailto:mazursky@gmail.com">mazursky@gmail.com</a></p>
-  <p class="small" style="opacity:.6;margin-top:1rem">Not affiliated with FIFA. We just love the game.</p>
+  <p><strong>World Cup @ YS</strong> · A grassroots Yellow Springs community project · Summer 2026</p>
+  <p>Questions? Email <a href="mailto:mazursky@gmail.com">mazursky@gmail.com</a></p>
+  <p class="small">Not affiliated with FIFA. All flags and trademarks belong to their respective owners.</p>
 </footer>
 
 <script>
-/* =================== ROUTING =================== */
-const routes = ['home','party','vote','volunteer','admin'];
-function showRoute(r){
-  if(!routes.includes(r)) r = 'home';
-  document.querySelectorAll('section.page').forEach(s => s.classList.toggle('active', s.id === r));
-  document.querySelectorAll('nav a[data-route]').forEach(a => a.classList.toggle('active', a.dataset.route === r));
-  window.scrollTo({top:0,behavior:'instant'});
-  if(r === 'vote') loadVotePage();
-  if(r === 'admin') initAdminPage();
-}
-window.addEventListener('hashchange', () => showRoute(location.hash.replace('#','') || 'home'));
-showRoute(location.hash.replace('#','') || 'home');
-
-/* =================== MATCH DATA ===================
-   2026 FIFA World Cup group stage — 72 matches.
-   Teams reflect the Dec 5, 2025 draw. Some slots remain
-   playoff winners (UEFA-A/B/C/D, IC1, IC2). Times are ET.
-*/
-const MATCHES = [
-  // GROUP A — Mexico, Czechia, Uzbekistan, IC1 (Inter-Confed playoff 1)
-  {id:'m1',  group:'A', date:'Thu Jun 11', time:'12:00 PM', home:'🇲🇽 Mexico',     away:'🇺🇿 Uzbekistan', venue:'Mexico City'},
-  {id:'m2',  group:'A', date:'Sat Jun 13', time:'12:00 PM', home:'🇨🇿 Czechia',    away:'🌐 IC1',         venue:'Guadalajara'},
-  {id:'m3',  group:'A', date:'Wed Jun 17', time:'12:00 PM', home:'🇲🇽 Mexico',     away:'🇨🇿 Czechia',    venue:'Mexico City'},
-  {id:'m4',  group:'A', date:'Wed Jun 17', time:'3:00 PM',  home:'🇺🇿 Uzbekistan', away:'🌐 IC1',         venue:'Monterrey'},
-  {id:'m5',  group:'A', date:'Mon Jun 22', time:'3:00 PM',  home:'🇺🇿 Uzbekistan', away:'🇨🇿 Czechia',    venue:'Guadalajara'},
-  {id:'m6',  group:'A', date:'Mon Jun 22', time:'3:00 PM',  home:'🌐 IC1',         away:'🇲🇽 Mexico',     venue:'Mexico City'},
-
-  // GROUP B — Canada, Bosnia & Herzegovina, Ecuador, UEFA-A
-  {id:'m7',  group:'B', date:'Thu Jun 11', time:'3:00 PM',  home:'🇨🇦 Canada',     away:'🇧🇦 Bosnia & H.', venue:'Toronto'},
-  {id:'m8',  group:'B', date:'Sat Jun 13', time:'3:00 PM',  home:'🇪🇨 Ecuador',    away:'🇪🇺 UEFA-A',      venue:'Vancouver'},
-  {id:'m9',  group:'B', date:'Wed Jun 17', time:'6:00 PM',  home:'🇨🇦 Canada',     away:'🇪🇨 Ecuador',     venue:'Toronto'},
-  {id:'m10', group:'B', date:'Wed Jun 17', time:'9:00 PM',  home:'🇧🇦 Bosnia & H.', away:'🇪🇺 UEFA-A',      venue:'Vancouver'},
-  {id:'m11', group:'B', date:'Mon Jun 22', time:'9:00 PM',  home:'🇪🇺 UEFA-A',     away:'🇨🇦 Canada',      venue:'Vancouver'},
-  {id:'m12', group:'B', date:'Mon Jun 22', time:'9:00 PM',  home:'🇧🇦 Bosnia & H.', away:'🇪🇨 Ecuador',     venue:'Toronto'},
-
-  // GROUP C — France, Senegal, Iran, UEFA-B
-  {id:'m13', group:'C', date:'Fri Jun 12', time:'12:00 PM', home:'🇫🇷 France',     away:'🇸🇳 Senegal',     venue:'Boston'},
-  {id:'m14', group:'C', date:'Sun Jun 14', time:'12:00 PM', home:'🇮🇷 Iran',       away:'🇪🇺 UEFA-B',      venue:'Philadelphia'},
-  {id:'m15', group:'C', date:'Thu Jun 18', time:'12:00 PM', home:'🇫🇷 France',     away:'🇮🇷 Iran',        venue:'Boston'},
-  {id:'m16', group:'C', date:'Thu Jun 18', time:'3:00 PM',  home:'🇸🇳 Senegal',    away:'🇪🇺 UEFA-B',      venue:'Philadelphia'},
-  {id:'m17', group:'C', date:'Tue Jun 23', time:'3:00 PM',  home:'🇪🇺 UEFA-B',     away:'🇫🇷 France',      venue:'Boston'},
-  {id:'m18', group:'C', date:'Tue Jun 23', time:'3:00 PM',  home:'🇸🇳 Senegal',    away:'🇮🇷 Iran',        venue:'Philadelphia'},
-
-  // GROUP D — Argentina, Türkiye, Tunisia, IC2
-  {id:'m19', group:'D', date:'Fri Jun 12', time:'3:00 PM',  home:'🇦🇷 Argentina',  away:'🇹🇳 Tunisia',     venue:'New York/NJ'},
-  {id:'m20', group:'D', date:'Sun Jun 14', time:'3:00 PM',  home:'🇹🇷 Türkiye',    away:'🌐 IC2',          venue:'Miami'},
-  {id:'m21', group:'D', date:'Thu Jun 18', time:'6:00 PM',  home:'🇦🇷 Argentina',  away:'🇹🇷 Türkiye',     venue:'New York/NJ'},
-  {id:'m22', group:'D', date:'Thu Jun 18', time:'9:00 PM',  home:'🇹🇳 Tunisia',    away:'🌐 IC2',          venue:'Miami'},
-  {id:'m23', group:'D', date:'Tue Jun 23', time:'9:00 PM',  home:'🌐 IC2',         away:'🇦🇷 Argentina',   venue:'New York/NJ'},
-  {id:'m24', group:'D', date:'Tue Jun 23', time:'9:00 PM',  home:'🇹🇷 Türkiye',    away:'🇹🇳 Tunisia',     venue:'Miami'},
-
-  // GROUP E — USA, Croatia, Saudi Arabia, UEFA-C
-  {id:'m25', group:'E', date:'Fri Jun 12', time:'6:00 PM',  home:'🇺🇸 USA',        away:'🇸🇦 Saudi Arabia', venue:'Los Angeles'},
-  {id:'m26', group:'E', date:'Sun Jun 14', time:'6:00 PM',  home:'🇭🇷 Croatia',    away:'🇪🇺 UEFA-C',      venue:'Seattle'},
-  {id:'m27', group:'E', date:'Fri Jun 19', time:'12:00 PM', home:'🇺🇸 USA',        away:'🇭🇷 Croatia',     venue:'Los Angeles'},
-  {id:'m28', group:'E', date:'Fri Jun 19', time:'3:00 PM',  home:'🇸🇦 Saudi Arabia', away:'🇪🇺 UEFA-C',    venue:'Seattle'},
-  {id:'m29', group:'E', date:'Wed Jun 24', time:'3:00 PM',  home:'🇪🇺 UEFA-C',     away:'🇺🇸 USA',         venue:'Los Angeles'},
-  {id:'m30', group:'E', date:'Wed Jun 24', time:'3:00 PM',  home:'🇭🇷 Croatia',    away:'🇸🇦 Saudi Arabia', venue:'Seattle'},
-
-  // GROUP F — Brazil, South Korea, Paraguay, Sweden
-  {id:'m31', group:'F', date:'Fri Jun 12', time:'9:00 PM',  home:'🇧🇷 Brazil',     away:'🇵🇾 Paraguay',   venue:'Atlanta'},
-  {id:'m32', group:'F', date:'Sun Jun 14', time:'9:00 PM',  home:'🇰🇷 South Korea', away:'🇸🇪 Sweden',     venue:'Houston'},
-  {id:'m33', group:'F', date:'Fri Jun 19', time:'6:00 PM',  home:'🇧🇷 Brazil',     away:'🇰🇷 South Korea', venue:'Atlanta'},
-  {id:'m34', group:'F', date:'Fri Jun 19', time:'9:00 PM',  home:'🇵🇾 Paraguay',   away:'🇸🇪 Sweden',     venue:'Houston'},
-  {id:'m35', group:'F', date:'Wed Jun 24', time:'9:00 PM',  home:'🇸🇪 Sweden',     away:'🇧🇷 Brazil',     venue:'Atlanta'},
-  {id:'m36', group:'F', date:'Wed Jun 24', time:'9:00 PM',  home:'🇰🇷 South Korea', away:'🇵🇾 Paraguay',   venue:'Houston'},
-
-  // GROUP G — England, Australia, Egypt, UEFA-D
-  {id:'m37', group:'G', date:'Sat Jun 13', time:'12:00 PM', home:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 England',    away:'🇦🇺 Australia',  venue:'Kansas City'},
-  {id:'m38', group:'G', date:'Mon Jun 15', time:'12:00 PM', home:'🇪🇬 Egypt',      away:'🇪🇺 UEFA-D',     venue:'Dallas'},
-  {id:'m39', group:'G', date:'Fri Jun 19', time:'12:00 PM', home:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 England',    away:'🇪🇬 Egypt',      venue:'Kansas City'},
-  {id:'m40', group:'G', date:'Fri Jun 19', time:'3:00 PM',  home:'🇦🇺 Australia',  away:'🇪🇺 UEFA-D',     venue:'Dallas'},
-  {id:'m41', group:'G', date:'Wed Jun 24', time:'3:00 PM',  home:'🇪🇺 UEFA-D',     away:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 England',    venue:'Kansas City'},
-  {id:'m42', group:'G', date:'Wed Jun 24', time:'3:00 PM',  home:'🇦🇺 Australia',  away:'🇪🇬 Egypt',      venue:'Dallas'},
-
-  // GROUP H — Spain, Algeria, Japan, Norway
-  {id:'m43', group:'H', date:'Sat Jun 13', time:'3:00 PM',  home:'🇪🇸 Spain',      away:'🇩🇿 Algeria',    venue:'San Francisco'},
-  {id:'m44', group:'H', date:'Mon Jun 15', time:'3:00 PM',  home:'🇯🇵 Japan',      away:'🇳🇴 Norway',     venue:'Houston'},
-  {id:'m45', group:'H', date:'Sat Jun 20', time:'12:00 PM', home:'🇪🇸 Spain',      away:'🇯🇵 Japan',      venue:'San Francisco'},
-  {id:'m46', group:'H', date:'Sat Jun 20', time:'3:00 PM',  home:'🇩🇿 Algeria',    away:'🇳🇴 Norway',     venue:'Houston'},
-  {id:'m47', group:'H', date:'Thu Jun 25', time:'3:00 PM',  home:'🇳🇴 Norway',     away:'🇪🇸 Spain',      venue:'San Francisco'},
-  {id:'m48', group:'H', date:'Thu Jun 25', time:'3:00 PM',  home:'🇯🇵 Japan',      away:'🇩🇿 Algeria',    venue:'Houston'},
-
-  // GROUP I — Germany, Iraq, South Africa, Colombia
-  {id:'m49', group:'I', date:'Sat Jun 13', time:'6:00 PM',  home:'🇩🇪 Germany',    away:'🇮🇶 Iraq',       venue:'Philadelphia'},
-  {id:'m50', group:'I', date:'Mon Jun 15', time:'6:00 PM',  home:'🇿🇦 South Africa', away:'🇨🇴 Colombia',  venue:'Miami'},
-  {id:'m51', group:'I', date:'Sat Jun 20', time:'6:00 PM',  home:'🇩🇪 Germany',    away:'🇿🇦 South Africa', venue:'Philadelphia'},
-  {id:'m52', group:'I', date:'Sat Jun 20', time:'9:00 PM',  home:'🇮🇶 Iraq',       away:'🇨🇴 Colombia',   venue:'Miami'},
-  {id:'m53', group:'I', date:'Thu Jun 25', time:'9:00 PM',  home:'🇨🇴 Colombia',   away:'🇩🇪 Germany',    venue:'Philadelphia'},
-  {id:'m54', group:'I', date:'Thu Jun 25', time:'9:00 PM',  home:'🇿🇦 South Africa', away:'🇮🇶 Iraq',      venue:'Miami'},
-
-  // GROUP J — Netherlands, Portugal, Morocco, Cape Verde
-  {id:'m55', group:'J', date:'Sat Jun 13', time:'9:00 PM',  home:'🇳🇱 Netherlands', away:'🇲🇦 Morocco',   venue:'Atlanta'},
-  {id:'m56', group:'J', date:'Mon Jun 15', time:'9:00 PM',  home:'🇵🇹 Portugal',   away:'🇨🇻 Cape Verde', venue:'Los Angeles'},
-  {id:'m57', group:'J', date:'Sat Jun 20', time:'6:00 PM',  home:'🇳🇱 Netherlands', away:'🇵🇹 Portugal',  venue:'Atlanta'},
-  {id:'m58', group:'J', date:'Sat Jun 20', time:'9:00 PM',  home:'🇲🇦 Morocco',    away:'🇨🇻 Cape Verde', venue:'Los Angeles'},
-  {id:'m59', group:'J', date:'Fri Jun 26', time:'3:00 PM',  home:'🇨🇻 Cape Verde', away:'🇳🇱 Netherlands', venue:'Atlanta'},
-  {id:'m60', group:'J', date:'Fri Jun 26', time:'3:00 PM',  home:'🇵🇹 Portugal',   away:'🇲🇦 Morocco',    venue:'Los Angeles'},
-
-  // GROUP K — Belgium, Switzerland, Côte d'Ivoire, DR Congo
-  {id:'m61', group:'K', date:'Sun Jun 14', time:'12:00 PM', home:'🇧🇪 Belgium',    away:'🇨🇮 Côte d\'Ivoire', venue:'Boston'},
-  {id:'m62', group:'K', date:'Tue Jun 16', time:'12:00 PM', home:'🇨🇭 Switzerland', away:'🇨🇩 DR Congo',  venue:'New York/NJ'},
-  {id:'m63', group:'K', date:'Sun Jun 21', time:'12:00 PM', home:'🇧🇪 Belgium',    away:'🇨🇭 Switzerland', venue:'Boston'},
-  {id:'m64', group:'K', date:'Sun Jun 21', time:'3:00 PM',  home:'🇨🇮 Côte d\'Ivoire', away:'🇨🇩 DR Congo', venue:'New York/NJ'},
-  {id:'m65', group:'K', date:'Fri Jun 26', time:'9:00 PM',  home:'🇨🇩 DR Congo',   away:'🇧🇪 Belgium',    venue:'Boston'},
-  {id:'m66', group:'K', date:'Fri Jun 26', time:'9:00 PM',  home:'🇨🇭 Switzerland', away:'🇨🇮 Côte d\'Ivoire', venue:'New York/NJ'},
-
-  // GROUP L — Uruguay, Italy, Austria, Ghana
-  {id:'m67', group:'L', date:'Sun Jun 14', time:'6:00 PM',  home:'🇺🇾 Uruguay',    away:'🇬🇭 Ghana',     venue:'Seattle'},
-  {id:'m68', group:'L', date:'Tue Jun 16', time:'3:00 PM',  home:'🇮🇹 Italy',      away:'🇦🇹 Austria',   venue:'San Francisco'},
-  {id:'m69', group:'L', date:'Sun Jun 21', time:'6:00 PM',  home:'🇺🇾 Uruguay',    away:'🇮🇹 Italy',     venue:'Seattle'},
-  {id:'m70', group:'L', date:'Sun Jun 21', time:'9:00 PM',  home:'🇦🇹 Austria',    away:'🇬🇭 Ghana',     venue:'San Francisco'},
-  {id:'m71', group:'L', date:'Sat Jun 27', time:'3:00 PM',  home:'🇬🇭 Ghana',      away:'🇮🇹 Italy',     venue:'Seattle'},
-  {id:'m72', group:'L', date:'Sat Jun 27', time:'3:00 PM',  home:'🇦🇹 Austria',    away:'🇺🇾 Uruguay',   venue:'San Francisco'},
+// ---------- 2026 World Cup Group Stage Schedule (post-draw, ET) ----------
+// Source: confirmed FIFA post-Dec 2025 draw + March 2026 playoff results.
+const SCHEDULE = [
+  // GROUP A
+  { id:"a1", group:"A", date:"Thu Jun 11", time:"3:00 PM", teamA:"Mexico", teamB:"South Africa", venue:"Estadio Azteca, Mexico City" },
+  { id:"a2", group:"A", date:"Thu Jun 11", time:"10:00 PM", teamA:"South Korea", teamB:"Czechia", venue:"Estadio Akron, Zapopan" },
+  { id:"a3", group:"A", date:"Thu Jun 18", time:"12:00 PM", teamA:"Czechia", teamB:"South Africa", venue:"Mercedes-Benz Stadium, Atlanta" },
+  { id:"a4", group:"A", date:"Thu Jun 18", time:"9:00 PM", teamA:"Mexico", teamB:"South Korea", venue:"Estadio Akron, Zapopan" },
+  { id:"a5", group:"A", date:"Wed Jun 24", time:"9:00 PM", teamA:"Czechia", teamB:"Mexico", venue:"Estadio Azteca, Mexico City" },
+  { id:"a6", group:"A", date:"Wed Jun 24", time:"9:00 PM", teamA:"South Africa", teamB:"South Korea", venue:"Estadio BBVA, Monterrey" },
+  // GROUP B
+  { id:"b1", group:"B", date:"Fri Jun 12", time:"3:00 PM", teamA:"Canada", teamB:"Bosnia & Herzegovina", venue:"BMO Field, Toronto" },
+  { id:"b2", group:"B", date:"Sat Jun 13", time:"3:00 PM", teamA:"Qatar", teamB:"Switzerland", venue:"Levi's Stadium, Santa Clara" },
+  { id:"b3", group:"B", date:"Thu Jun 18", time:"3:00 PM", teamA:"Switzerland", teamB:"Bosnia & Herzegovina", venue:"SoFi Stadium, Inglewood" },
+  { id:"b4", group:"B", date:"Thu Jun 18", time:"6:00 PM", teamA:"Canada", teamB:"Qatar", venue:"BC Place, Vancouver" },
+  { id:"b5", group:"B", date:"Wed Jun 24", time:"3:00 PM", teamA:"Switzerland", teamB:"Canada", venue:"BC Place, Vancouver" },
+  { id:"b6", group:"B", date:"Wed Jun 24", time:"3:00 PM", teamA:"Bosnia & Herzegovina", teamB:"Qatar", venue:"Lumen Field, Seattle" },
+  // GROUP C
+  { id:"c1", group:"C", date:"Sat Jun 13", time:"6:00 PM", teamA:"Brazil", teamB:"Morocco", venue:"MetLife Stadium, East Rutherford" },
+  { id:"c2", group:"C", date:"Sat Jun 13", time:"9:00 PM", teamA:"Haiti", teamB:"Scotland", venue:"Gillette Stadium, Foxborough" },
+  { id:"c3", group:"C", date:"Fri Jun 19", time:"6:00 PM", teamA:"Scotland", teamB:"Morocco", venue:"Gillette Stadium, Foxborough" },
+  { id:"c4", group:"C", date:"Fri Jun 19", time:"8:30 PM", teamA:"Brazil", teamB:"Haiti", venue:"Lincoln Financial Field, Philadelphia" },
+  { id:"c5", group:"C", date:"Wed Jun 24", time:"6:00 PM", teamA:"Scotland", teamB:"Brazil", venue:"Hard Rock Stadium, Miami Gardens" },
+  { id:"c6", group:"C", date:"Wed Jun 24", time:"6:00 PM", teamA:"Morocco", teamB:"Haiti", venue:"Mercedes-Benz Stadium, Atlanta" },
+  // GROUP D
+  { id:"d1", group:"D", date:"Fri Jun 12", time:"9:00 PM", teamA:"USA", teamB:"Paraguay", venue:"SoFi Stadium, Inglewood" },
+  { id:"d2", group:"D", date:"Sun Jun 14", time:"12:00 AM", teamA:"Australia", teamB:"Türkiye", venue:"BC Place, Vancouver" },
+  { id:"d3", group:"D", date:"Fri Jun 19", time:"3:00 PM", teamA:"USA", teamB:"Australia", venue:"Lumen Field, Seattle" },
+  { id:"d4", group:"D", date:"Fri Jun 19", time:"11:00 PM", teamA:"Türkiye", teamB:"Paraguay", venue:"Levi's Stadium, Santa Clara" },
+  { id:"d5", group:"D", date:"Thu Jun 25", time:"10:00 PM", teamA:"Türkiye", teamB:"USA", venue:"SoFi Stadium, Inglewood" },
+  { id:"d6", group:"D", date:"Thu Jun 25", time:"10:00 PM", teamA:"Paraguay", teamB:"Australia", venue:"Levi's Stadium, Santa Clara" },
+  // GROUP E
+  { id:"e1", group:"E", date:"Sun Jun 14", time:"1:00 PM", teamA:"Germany", teamB:"Curaçao", venue:"NRG Stadium, Houston" },
+  { id:"e2", group:"E", date:"Sun Jun 14", time:"7:00 PM", teamA:"Ivory Coast", teamB:"Ecuador", venue:"Lincoln Financial Field, Philadelphia" },
+  { id:"e3", group:"E", date:"Sat Jun 20", time:"4:00 PM", teamA:"Germany", teamB:"Ivory Coast", venue:"BMO Field, Toronto" },
+  { id:"e4", group:"E", date:"Sat Jun 20", time:"8:00 PM", teamA:"Ecuador", teamB:"Curaçao", venue:"Arrowhead Stadium, Kansas City" },
+  { id:"e5", group:"E", date:"Thu Jun 25", time:"4:00 PM", teamA:"Curaçao", teamB:"Ivory Coast", venue:"Lincoln Financial Field, Philadelphia" },
+  { id:"e6", group:"E", date:"Thu Jun 25", time:"4:00 PM", teamA:"Ecuador", teamB:"Germany", venue:"MetLife Stadium, East Rutherford" },
+  // GROUP F
+  { id:"f1", group:"F", date:"Sun Jun 14", time:"4:00 PM", teamA:"Netherlands", teamB:"Japan", venue:"AT&T Stadium, Arlington" },
+  { id:"f2", group:"F", date:"Sun Jun 14", time:"10:00 PM", teamA:"Sweden", teamB:"Tunisia", venue:"Estadio BBVA, Monterrey" },
+  { id:"f3", group:"F", date:"Sat Jun 20", time:"1:00 PM", teamA:"Netherlands", teamB:"Sweden", venue:"NRG Stadium, Houston" },
+  { id:"f4", group:"F", date:"Sun Jun 21", time:"12:00 AM", teamA:"Tunisia", teamB:"Japan", venue:"Estadio BBVA, Monterrey" },
+  { id:"f5", group:"F", date:"Thu Jun 25", time:"7:00 PM", teamA:"Japan", teamB:"Sweden", venue:"AT&T Stadium, Arlington" },
+  { id:"f6", group:"F", date:"Thu Jun 25", time:"7:00 PM", teamA:"Tunisia", teamB:"Netherlands", venue:"Arrowhead Stadium, Kansas City" },
+  // GROUP G
+  { id:"g1", group:"G", date:"Mon Jun 15", time:"3:00 PM", teamA:"Belgium", teamB:"Egypt", venue:"Lumen Field, Seattle" },
+  { id:"g2", group:"G", date:"Mon Jun 15", time:"9:00 PM", teamA:"Iran", teamB:"New Zealand", venue:"SoFi Stadium, Inglewood" },
+  { id:"g3", group:"G", date:"Sun Jun 21", time:"3:00 PM", teamA:"Belgium", teamB:"Iran", venue:"SoFi Stadium, Inglewood" },
+  { id:"g4", group:"G", date:"Sun Jun 21", time:"9:00 PM", teamA:"New Zealand", teamB:"Egypt", venue:"BC Place, Vancouver" },
+  { id:"g5", group:"G", date:"Fri Jun 26", time:"11:00 PM", teamA:"Egypt", teamB:"Iran", venue:"Lumen Field, Seattle" },
+  { id:"g6", group:"G", date:"Fri Jun 26", time:"11:00 PM", teamA:"New Zealand", teamB:"Belgium", venue:"BC Place, Vancouver" },
+  // GROUP H
+  { id:"h1", group:"H", date:"Mon Jun 15", time:"12:00 PM", teamA:"Spain", teamB:"Cape Verde", venue:"Mercedes-Benz Stadium, Atlanta" },
+  { id:"h2", group:"H", date:"Mon Jun 15", time:"6:00 PM", teamA:"Saudi Arabia", teamB:"Uruguay", venue:"Hard Rock Stadium, Miami Gardens" },
+  { id:"h3", group:"H", date:"Sun Jun 21", time:"12:00 PM", teamA:"Spain", teamB:"Saudi Arabia", venue:"Mercedes-Benz Stadium, Atlanta" },
+  { id:"h4", group:"H", date:"Sun Jun 21", time:"6:00 PM", teamA:"Uruguay", teamB:"Cape Verde", venue:"Hard Rock Stadium, Miami Gardens" },
+  { id:"h5", group:"H", date:"Fri Jun 26", time:"8:00 PM", teamA:"Cape Verde", teamB:"Saudi Arabia", venue:"NRG Stadium, Houston" },
+  { id:"h6", group:"H", date:"Fri Jun 26", time:"8:00 PM", teamA:"Uruguay", teamB:"Spain", venue:"Estadio Akron, Zapopan" },
+  // GROUP I
+  { id:"i1", group:"I", date:"Tue Jun 16", time:"3:00 PM", teamA:"France", teamB:"Senegal", venue:"MetLife Stadium, East Rutherford" },
+  { id:"i2", group:"I", date:"Tue Jun 16", time:"6:00 PM", teamA:"Iraq", teamB:"Norway", venue:"Gillette Stadium, Foxborough" },
+  { id:"i3", group:"I", date:"Mon Jun 22", time:"5:00 PM", teamA:"France", teamB:"Iraq", venue:"Lincoln Financial Field, Philadelphia" },
+  { id:"i4", group:"I", date:"Mon Jun 22", time:"8:00 PM", teamA:"Norway", teamB:"Senegal", venue:"MetLife Stadium, East Rutherford" },
+  { id:"i5", group:"I", date:"Fri Jun 26", time:"3:00 PM", teamA:"Norway", teamB:"France", venue:"Gillette Stadium, Foxborough" },
+  { id:"i6", group:"I", date:"Fri Jun 26", time:"3:00 PM", teamA:"Senegal", teamB:"Iraq", venue:"BMO Field, Toronto" },
+  // GROUP J
+  { id:"j1", group:"J", date:"Tue Jun 16", time:"9:00 PM", teamA:"Argentina", teamB:"Algeria", venue:"Arrowhead Stadium, Kansas City" },
+  { id:"j2", group:"J", date:"Wed Jun 17", time:"12:00 AM", teamA:"Austria", teamB:"Jordan", venue:"Levi's Stadium, Santa Clara" },
+  { id:"j3", group:"J", date:"Mon Jun 22", time:"1:00 PM", teamA:"Argentina", teamB:"Austria", venue:"AT&T Stadium, Arlington" },
+  { id:"j4", group:"J", date:"Mon Jun 22", time:"11:00 PM", teamA:"Jordan", teamB:"Algeria", venue:"Levi's Stadium, Santa Clara" },
+  { id:"j5", group:"J", date:"Sat Jun 27", time:"10:00 PM", teamA:"Algeria", teamB:"Austria", venue:"Arrowhead Stadium, Kansas City" },
+  { id:"j6", group:"J", date:"Sat Jun 27", time:"10:00 PM", teamA:"Jordan", teamB:"Argentina", venue:"AT&T Stadium, Arlington" },
+  // GROUP K
+  { id:"k1", group:"K", date:"Wed Jun 17", time:"1:00 PM", teamA:"Portugal", teamB:"DR Congo", venue:"NRG Stadium, Houston" },
+  { id:"k2", group:"K", date:"Wed Jun 17", time:"10:00 PM", teamA:"Uzbekistan", teamB:"Colombia", venue:"Estadio Azteca, Mexico City" },
+  { id:"k3", group:"K", date:"Tue Jun 23", time:"1:00 PM", teamA:"Portugal", teamB:"Uzbekistan", venue:"NRG Stadium, Houston" },
+  { id:"k4", group:"K", date:"Tue Jun 23", time:"10:00 PM", teamA:"Colombia", teamB:"DR Congo", venue:"Estadio Akron, Zapopan" },
+  { id:"k5", group:"K", date:"Sat Jun 27", time:"7:30 PM", teamA:"Colombia", teamB:"Portugal", venue:"Hard Rock Stadium, Miami Gardens" },
+  { id:"k6", group:"K", date:"Sat Jun 27", time:"7:30 PM", teamA:"DR Congo", teamB:"Uzbekistan", venue:"Mercedes-Benz Stadium, Atlanta" },
+  // GROUP L
+  { id:"l1", group:"L", date:"Wed Jun 17", time:"4:00 PM", teamA:"England", teamB:"Croatia", venue:"AT&T Stadium, Arlington" },
+  { id:"l2", group:"L", date:"Wed Jun 17", time:"7:00 PM", teamA:"Ghana", teamB:"Panama", venue:"BMO Field, Toronto" },
+  { id:"l3", group:"L", date:"Tue Jun 23", time:"4:00 PM", teamA:"England", teamB:"Ghana", venue:"Gillette Stadium, Foxborough" },
+  { id:"l4", group:"L", date:"Tue Jun 23", time:"7:00 PM", teamA:"Panama", teamB:"Croatia", venue:"BMO Field, Toronto" },
+  { id:"l5", group:"L", date:"Sat Jun 27", time:"5:00 PM", teamA:"Panama", teamB:"England", venue:"MetLife Stadium, East Rutherford" },
+  { id:"l6", group:"L", date:"Sat Jun 27", time:"5:00 PM", teamA:"Croatia", teamB:"Ghana", venue:"Lincoln Financial Field, Philadelphia" },
 ];
 
-const GROUPS = {
-  A:'Mexico · Czechia · Uzbekistan · IC1',
-  B:'Canada · Bosnia & H. · Ecuador · UEFA-A',
-  C:'France · Senegal · Iran · UEFA-B',
-  D:'Argentina · Türkiye · Tunisia · IC2',
-  E:'USA · Croatia · Saudi Arabia · UEFA-C',
-  F:'Brazil · South Korea · Paraguay · Sweden',
-  G:'England · Australia · Egypt · UEFA-D',
-  H:'Spain · Algeria · Japan · Norway',
-  I:'Germany · Iraq · South Africa · Colombia',
-  J:'Netherlands · Portugal · Morocco · Cape Verde',
-  K:'Belgium · Switzerland · Côte d\'Ivoire · DR Congo',
-  L:'Uruguay · Italy · Austria · Ghana'
-};
-
-/* =================== VOTING (Cloudflare-backed) =================== */
 const POINTS_BUDGET = 10;
-const API = '/api';
 
-let voterName = localStorage.getItem('ys_voter_name') || '';
-let userVotes = {};   // { matchId: count } — this voter only
-let pointsSpent = 0;
-let matchTotals = {}; // { matchId: count } — global
-let votePageBuilt = false;
+// ---------- Routing ----------
+const ROUTES = ["home","party","vote","volunteer","admin"];
+function showPage(route){
+  if(!ROUTES.includes(route)) route = "home";
+  ROUTES.forEach(r=>{
+    const el = document.getElementById("page-"+r);
+    if(el) el.classList.toggle("active", r===route);
+  });
+  document.querySelectorAll('nav a[data-route]').forEach(a=>{
+    a.classList.toggle("active", a.dataset.route===route);
+  });
+  window.scrollTo({top:0,behavior:"instant"});
+  if(route==="vote") renderSchedule();
+  if(route==="admin") initAdmin();
+}
+function routeFromHash(){
+  const h = (location.hash||"#home").replace(/^#/,"").split("?")[0];
+  return h || "home";
+}
+window.addEventListener("hashchange", ()=>showPage(routeFromHash()));
 
-const $ = s => document.querySelector(s);
-const $$ = s => document.querySelectorAll(s);
+// ---------- Voting (server-backed) ----------
+const TEAM_FLAGS = {
+  "Mexico":"🇲🇽","South Africa":"🇿🇦","South Korea":"🇰🇷","Czechia":"🇨🇿",
+  "Canada":"🇨🇦","Bosnia & Herzegovina":"🇧🇦","Qatar":"🇶🇦","Switzerland":"🇨🇭",
+  "Brazil":"🇧🇷","Morocco":"🇲🇦","Haiti":"🇭🇹","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "USA":"🇺🇸","Paraguay":"🇵🇾","Australia":"🇦🇺","Türkiye":"🇹🇷",
+  "Germany":"🇩🇪","Curaçao":"🇨🇼","Ivory Coast":"🇨🇮","Ecuador":"🇪🇨",
+  "Netherlands":"🇳🇱","Japan":"🇯🇵","Sweden":"🇸🇪","Tunisia":"🇹🇳",
+  "Belgium":"🇧🇪","Egypt":"🇪🇬","Iran":"🇮🇷","New Zealand":"🇳🇿",
+  "Spain":"🇪🇸","Cape Verde":"🇨🇻","Saudi Arabia":"🇸🇦","Uruguay":"🇺🇾",
+  "France":"🇫🇷","Senegal":"🇸🇳","Iraq":"🇮🇶","Norway":"🇳🇴",
+  "Argentina":"🇦🇷","Algeria":"🇩🇿","Austria":"🇦🇹","Jordan":"🇯🇴",
+  "Portugal":"🇵🇹","DR Congo":"🇨🇩","Uzbekistan":"🇺🇿","Colombia":"🇨🇴",
+  "England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Croatia":"🇭🇷","Ghana":"🇬🇭","Panama":"🇵🇦",
+};
+function flag(t){ return TEAM_FLAGS[t] || ""; }
+
+let SERVER_RESULTS = {};       // matchId -> count
+let MY_VOTES = {};             // matchId -> my count
+let MY_SPENT = 0;
+
+const $name = document.getElementById("voter-name");
+const $points = document.getElementById("points-badge");
+const $status = document.getElementById("vote-status");
+const $errors = document.getElementById("error-box");
+
+$name.value = localStorage.getItem("wcys_name") || "";
+$name.addEventListener("change", async ()=>{
+  localStorage.setItem("wcys_name", $name.value.trim());
+  await loadMyVotes();
+  renderSchedule();
+});
 
 function showError(msg){
-  const el = $('#vote-status');
-  el.textContent = msg;
-  el.style.display = 'block';
-  setTimeout(() => el.style.display='none', 4000);
+  $errors.innerHTML = `<div class="error">${msg}</div>`;
+  setTimeout(()=>{ $errors.innerHTML=""; }, 4000);
 }
+function setStatus(msg){ $status.textContent = msg || ""; }
 
-async function loadVotePage(){
-  // Fetch global totals
+async function loadResults(){
   try{
-    const res = await fetch(API + '/results');
-    const data = await res.json();
-    matchTotals = data.results || {};
-  }catch(e){
-    matchTotals = {};
-    showError('Could not load vote totals (offline?). You can still vote.');
-  }
-
-  $('#loading-status').style.display = 'none';
-
-  if(!votePageBuilt){ buildVotePage(); votePageBuilt = true; }
-  else { refreshAllTotals(); }
-
-  $('#voter-name').value = voterName;
-  if(voterName) await loadVoterState();
-  else { userVotes = {}; pointsSpent = 0; updatePointsUI(); }
+    const r = await fetch("/api/results");
+    const j = await r.json();
+    SERVER_RESULTS = j.results || {};
+  }catch(e){ /* offline ok */ }
 }
-
-function buildVotePage(){
-  const container = $('#matches-container');
-  container.innerHTML = '';
-  const groupKeys = Object.keys(GROUPS);
-  groupKeys.forEach(g => {
-    const matches = MATCHES.filter(m => m.group === g);
-    const div = document.createElement('div');
-    div.className = 'group';
-    div.innerHTML = `
-      <h3>Group ${g} <span class="teams">${GROUPS[g]}</span></h3>
-      <table class="matches">
-        <thead><tr><th>Date</th><th>Time (ET)</th><th>Match</th><th>Venue</th><th style="text-align:right">Vote</th></tr></thead>
-        <tbody>
-          ${matches.map(m => `
-            <tr data-mid="${m.id}">
-              <td>${m.date}</td>
-              <td>${m.time}</td>
-              <td class="match-cell">${m.home} <span style="color:var(--muted);font-weight:400">vs</span> ${m.away}</td>
-              <td class="small">${m.venue}</td>
-              <td class="vote-cell">
-                <button class="vote-btn minus" data-action="minus" data-mid="${m.id}" aria-label="Remove vote">−</button>
-                <span class="vote-count" id="vc-${m.id}">0</span>
-                <button class="vote-btn" data-action="plus" data-mid="${m.id}" aria-label="Add vote">+</button>
-                <span class="total-badge" id="tot-${m.id}" title="Total community votes">${matchTotals[m.id] || 0}</span>
-              </td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    `;
-    container.appendChild(div);
-  });
-
-  container.addEventListener('click', e => {
-    const btn = e.target.closest('button[data-action]');
-    if(!btn) return;
-    castVote(btn.dataset.mid, btn.dataset.action === 'plus' ? 1 : -1);
-  });
-}
-
-function refreshAllTotals(){
-  MATCHES.forEach(m => {
-    const el = document.getElementById('tot-' + m.id);
-    if(el) el.textContent = matchTotals[m.id] || 0;
-  });
-}
-
-function updatePointsUI(){
-  $('#points-left').textContent = POINTS_BUDGET - pointsSpent;
-  MATCHES.forEach(m => {
-    const vc = document.getElementById('vc-' + m.id);
-    if(vc) vc.textContent = userVotes[m.id] || 0;
-    const row = document.querySelector(`tr[data-mid="${m.id}"]`);
-    if(row){
-      row.querySelector('button[data-action="plus"]').disabled = pointsSpent >= POINTS_BUDGET;
-      row.querySelector('button[data-action="minus"]').disabled = !userVotes[m.id];
-    }
-  });
-}
-
-async function loadVoterState(){
+async function loadMyVotes(){
+  const name = $name.value.trim();
+  if(!name){ MY_VOTES = {}; MY_SPENT = 0; updatePoints(); return; }
   try{
-    const res = await fetch(API + '/user?name=' + encodeURIComponent(voterName));
-    if(!res.ok) throw new Error('user fetch failed');
-    const data = await res.json();
-    userVotes = data.votes || {};
-    pointsSpent = data.spent || 0;
-    updatePointsUI();
-  }catch(e){
-    userVotes = {}; pointsSpent = 0; updatePointsUI();
-  }
+    const r = await fetch("/api/user?name=" + encodeURIComponent(name));
+    const j = await r.json();
+    MY_VOTES = j.votes || {};
+    MY_SPENT = j.spent || 0;
+    updatePoints();
+  }catch(e){}
+}
+function updatePoints(){
+  const left = POINTS_BUDGET - MY_SPENT;
+  $points.textContent = $name.value.trim() ? `${left} of ${POINTS_BUDGET} points left` : "Enter your name to vote";
 }
 
 async function castVote(matchId, delta){
-  const name = $('#voter-name').value.trim();
-  if(!name){ showError('Enter your name above before voting.'); $('#voter-name').focus(); return; }
-  voterName = name;
-  localStorage.setItem('ys_voter_name', voterName);
-
-  if(delta === 1 && pointsSpent >= POINTS_BUDGET){ showError('You\'re out of points. Tap − to free some up.'); return; }
-  if(delta === -1 && !(userVotes[matchId] > 0)) return;
-
-  // Optimistic UI
-  userVotes[matchId] = (userVotes[matchId] || 0) + delta;
-  pointsSpent += delta;
-  matchTotals[matchId] = Math.max(0, (matchTotals[matchId] || 0) + delta);
-  updatePointsUI();
-  document.getElementById('tot-' + matchId).textContent = matchTotals[matchId];
-
+  const name = $name.value.trim();
+  if(!name){ showError("Enter your name first."); $name.focus(); return; }
+  // optimistic
+  MY_VOTES[matchId] = (MY_VOTES[matchId]||0) + delta;
+  MY_SPENT += delta;
+  SERVER_RESULTS[matchId] = Math.max(0,(SERVER_RESULTS[matchId]||0) + delta);
+  updatePoints(); renderSchedule(); setStatus("saving…");
   try{
-    const res = await fetch(API + '/vote', {
-      method:'POST',
-      headers:{'content-type':'application/json'},
-      body: JSON.stringify({name: voterName, matchId, delta})
+    const r = await fetch("/api/vote", {
+      method:"POST",
+      headers:{"content-type":"application/json"},
+      body: JSON.stringify({ name, matchId, delta })
     });
-    const data = await res.json();
-    if(!res.ok){ throw new Error(data.error || 'vote failed'); }
-    // Sync from server truth
-    userVotes = data.userVotes || userVotes;
-    pointsSpent = data.spent;
-    matchTotals[matchId] = data.matchTotal;
-    updatePointsUI();
-    document.getElementById('tot-' + matchId).textContent = matchTotals[matchId];
+    const j = await r.json();
+    if(!r.ok){
+      // rollback
+      MY_VOTES[matchId] = (MY_VOTES[matchId]||0) - delta;
+      MY_SPENT -= delta;
+      SERVER_RESULTS[matchId] = Math.max(0,(SERVER_RESULTS[matchId]||0) - delta);
+      showError(j.error || "Vote failed.");
+      setStatus("");
+      updatePoints(); renderSchedule();
+      return;
+    }
+    // sync with server truth
+    MY_VOTES = j.userVotes || MY_VOTES;
+    MY_SPENT = j.spent ?? MY_SPENT;
+    SERVER_RESULTS[matchId] = j.matchTotal;
+    setStatus("saved ✓");
+    setTimeout(()=>setStatus(""), 1200);
+    updatePoints(); renderSchedule();
   }catch(e){
-    // Rollback
-    userVotes[matchId] = (userVotes[matchId] || 0) - delta;
-    pointsSpent -= delta;
-    matchTotals[matchId] = Math.max(0, (matchTotals[matchId] || 0) - delta);
-    updatePointsUI();
-    document.getElementById('tot-' + matchId).textContent = matchTotals[matchId];
-    showError(e.message || 'Vote failed. Try again.');
+    showError("Network error. Check your connection.");
+    setStatus("");
   }
 }
 
-$('#voter-name').addEventListener('change', async e => {
-  voterName = e.target.value.trim();
-  localStorage.setItem('ys_voter_name', voterName);
-  if(voterName) await loadVoterState();
-});
+function renderSchedule(){
+  const container = document.getElementById("schedule-container");
+  if(!container) return;
+  const groups = {};
+  SCHEDULE.forEach(m=>{ (groups[m.group] = groups[m.group] || []).push(m); });
 
-$('#reset-btn').addEventListener('click', () => {
-  voterName = '';
-  localStorage.removeItem('ys_voter_name');
-  $('#voter-name').value = '';
-  userVotes = {}; pointsSpent = 0;
-  updatePointsUI();
-  $('#voter-name').focus();
-});
-
-/* =================== VOLUNTEER FORM =================== */
-if(location.search.includes('signup=ok')){
-  document.addEventListener('DOMContentLoaded', () => {
-    const s = $('#vol-success');
-    if(s){ s.style.display='block'; $('#vol-form').reset(); }
+  const out = [];
+  Object.keys(groups).sort().forEach(g=>{
+    const matches = groups[g];
+    const teams = [...new Set(matches.flatMap(m=>[m.teamA,m.teamB]))];
+    out.push(`<div class="group">
+      <h3>Group ${g} <span class="teams">${teams.map(t=>flag(t)+" "+t).join(" · ")}</span></h3>
+      <table class="matches"><thead><tr>
+        <th>Date</th><th>Time (ET)</th><th>Match</th><th>Venue</th><th style="text-align:right">Your vote</th>
+      </tr></thead><tbody>
+      ${matches.map(m=>{
+        const myCount = MY_VOTES[m.id]||0;
+        const total = SERVER_RESULTS[m.id]||0;
+        const noPoints = (POINTS_BUDGET - MY_SPENT) <= 0;
+        return `<tr>
+          <td>${m.date}</td>
+          <td>${m.time}</td>
+          <td class="match-cell">${flag(m.teamA)} ${m.teamA} <span style="opacity:.5">vs</span> ${flag(m.teamB)} ${m.teamB}
+            ${total>0?`<span class="total-badge">${total} 🗳️</span>`:""}
+          </td>
+          <td class="small">${m.venue}</td>
+          <td class="vote-cell">
+            <button class="vote-btn minus" data-id="${m.id}" data-delta="-1" ${myCount<=0?"disabled":""} aria-label="Downvote">−</button>
+            <span class="vote-count">${myCount}</span>
+            <button class="vote-btn" data-id="${m.id}" data-delta="1" ${noPoints?"disabled":""} aria-label="Upvote">+</button>
+          </td>
+        </tr>`;
+      }).join("")}
+      </tbody></table>
+    </div>`);
+  });
+  container.innerHTML = out.join("");
+  container.querySelectorAll(".vote-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>castVote(btn.dataset.id, parseInt(btn.dataset.delta,10)));
   });
 }
 
-/* =================== ADMIN PAGE =================== */
-function initAdminPage(){
-  const stored = sessionStorage.getItem('ys_admin_key');
-  if(stored){ loadAdminData(stored); return; }
-  $('#admin-login').style.display = 'block';
-  $('#admin-content').style.display = 'none';
-}
-
-$('#admin-login-btn').addEventListener('click', () => {
-  const key = $('#admin-key-input').value.trim();
-  if(!key) return;
-  loadAdminData(key);
-});
-$('#admin-key-input').addEventListener('keydown', e => {
-  if(e.key === 'Enter') $('#admin-login-btn').click();
-});
-$('#admin-logout').addEventListener('click', e => {
-  e.preventDefault();
-  sessionStorage.removeItem('ys_admin_key');
-  initAdminPage();
-});
-$('#admin-refresh').addEventListener('click', () => {
-  const key = sessionStorage.getItem('ys_admin_key');
-  if(key) loadAdminData(key);
-});
-
-async function loadAdminData(key){
-  const errEl = $('#admin-error');
-  errEl.style.display = 'none';
-  try{
-    const res = await fetch(API + '/admin?key=' + encodeURIComponent(key));
-    const data = await res.json();
-    if(!res.ok) throw new Error(data.error || 'unauthorized');
-    sessionStorage.setItem('ys_admin_key', key);
-    renderAdmin(data);
-  }catch(e){
-    errEl.textContent = '❌ ' + (e.message || 'failed');
-    errEl.style.display = 'block';
-    $('#admin-login').style.display = 'block';
-    $('#admin-content').style.display = 'none';
+// ---------- Admin ----------
+async function initAdmin(){
+  const stored = sessionStorage.getItem("wcys_admin_key");
+  if(stored){
+    const ok = await loadAdmin(stored);
+    if(ok) return;
+    sessionStorage.removeItem("wcys_admin_key");
   }
+  document.getElementById("admin-login").style.display = "";
+  document.getElementById("admin-content").style.display = "none";
+}
+document.getElementById("admin-login-form").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const key = document.getElementById("admin-key").value.trim();
+  const ok = await loadAdmin(key);
+  if(ok) sessionStorage.setItem("wcys_admin_key", key);
+  else document.getElementById("admin-error").innerHTML = `<div class="error">Invalid admin key.</div>`;
+});
+document.getElementById("admin-refresh").addEventListener("click", ()=>{
+  const k = sessionStorage.getItem("wcys_admin_key");
+  if(k) loadAdmin(k);
+});
+document.getElementById("admin-logout").addEventListener("click", ()=>{
+  sessionStorage.removeItem("wcys_admin_key");
+  initAdmin();
+});
+
+async function loadAdmin(key){
+  try{
+    const r = await fetch("/api/admin?key=" + encodeURIComponent(key));
+    if(!r.ok) return false;
+    const data = await r.json();
+    renderAdmin(data);
+    document.getElementById("admin-login").style.display = "none";
+    document.getElementById("admin-content").style.display = "";
+    return true;
+  }catch(e){ return false; }
 }
 
-function renderAdmin(data){
-  $('#admin-login').style.display = 'none';
-  $('#admin-content').style.display = 'block';
-
-  $('#stat-voters').textContent = data.totalVoters || 0;
-  $('#stat-votes').textContent = data.totalVotes || 0;
-  $('#stat-matches').textContent = Object.values(data.matches || {}).filter(v => v > 0).length;
-
-  // Leaderboard
-  const matchById = Object.fromEntries(MATCHES.map(m => [m.id, m]));
-  const rows = Object.entries(data.matches || {})
-    .map(([id, votes]) => ({id, votes, m: matchById[id]}))
-    .filter(r => r.m)
-    .sort((a,b) => b.votes - a.votes);
-  const max = rows.length ? rows[0].votes : 1;
-  const lbBody = $('#leaderboard tbody');
-  lbBody.innerHTML = rows.length ? rows.map((r,i) => `
-    <tr>
-      <td>${i+1}</td>
-      <td><strong>${r.m.home} vs ${r.m.away}</strong><br><span class="small">Group ${r.m.group} · ${r.m.date} ${r.m.time} ET · ${r.m.venue}</span></td>
-      <td><span class="bar" style="width:${Math.max(8, (r.votes/max)*120)}px"></span><strong>${r.votes}</strong></td>
-    </tr>
-  `).join('') : '<tr><td colspan="3" class="small">No votes yet.</td></tr>';
-
-  // Voters
-  const vBody = $('#voter-list tbody');
-  vBody.innerHTML = (data.users || []).length ? data.users.map(u => `
-    <tr>
-      <td>${escapeHtml(u.name)}</td>
-      <td>${u.spent} / 10</td>
-      <td class="small">${u.lastVote ? new Date(u.lastVote).toLocaleString() : '—'}</td>
-    </tr>
-  `).join('') : '<tr><td colspan="3" class="small">No voters yet.</td></tr>';
+function matchLabel(id){
+  const m = SCHEDULE.find(x=>x.id===id);
+  if(!m) return id;
+  return `${flag(m.teamA)} ${m.teamA} vs ${flag(m.teamB)} ${m.teamB} <span class="small">(${m.date}, ${m.time}, Grp ${m.group})</span>`;
 }
 
-function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function renderAdmin(d){
+  document.getElementById("admin-stats").innerHTML = `
+    <div class="stat"><span class="n">${d.totalVoters}</span><span class="l">Voters</span></div>
+    <div class="stat"><span class="n">${d.totalVotes}</span><span class="l">Votes cast</span></div>
+    <div class="stat"><span class="n">${Object.keys(d.matches).length}</span><span class="l">Matches w/ votes</span></div>
+    <div class="stat"><span class="n">${d.totalVoters>0?Math.round(d.totalVotes/d.totalVoters*10)/10:0}</span><span class="l">Avg per voter</span></div>
+  `;
+  const sorted = Object.entries(d.matches).sort((a,b)=>b[1]-a[1]);
+  const max = sorted[0]?sorted[0][1]:1;
+  document.getElementById("admin-leaderboard").innerHTML = sorted.length===0
+    ? "<p><em>No votes yet.</em></p>"
+    : `<table class="leaderboard"><thead><tr><th>#</th><th>Match</th><th>Votes</th></tr></thead><tbody>${
+      sorted.map((row,i)=>`<tr><td>${i+1}</td><td>${matchLabel(row[0])}</td><td><span class="bar" style="width:${Math.max(8,row[1]/max*180)}px"></span>${row[1]}</td></tr>`).join("")
+    }</tbody></table>`;
+
+  document.getElementById("admin-voters").innerHTML = d.users.length===0
+    ? "<p><em>No voters yet.</em></p>"
+    : `<table class="leaderboard"><thead><tr><th>Name</th><th>Spent</th><th>Voted for</th><th>Last vote</th></tr></thead><tbody>${
+      d.users.map(u=>{
+        const picks = Object.entries(u.votes||{}).filter(([,n])=>n>0)
+          .map(([id,n])=>{
+            const m = SCHEDULE.find(x=>x.id===id);
+            return m ? `${m.teamA} v ${m.teamB} ×${n}` : `${id} ×${n}`;
+          }).join(" · ") || "—";
+        const last = u.lastVote ? new Date(u.lastVote).toLocaleString() : "—";
+        return `<tr><td><strong>${escapeHtml(u.name)}</strong></td><td>${u.spent}/${POINTS_BUDGET}</td><td class="small">${picks}</td><td class="small">${last}</td></tr>`;
+      }).join("")
+    }</tbody></table>`;
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+// ---------- Volunteer form success ----------
+if(location.search.includes("ok=1")){
+  document.getElementById("vol-success").style.display = "block";
+}
+
+// ---------- Init ----------
+(async ()=>{
+  await loadResults();
+  await loadMyVotes();
+  showPage(routeFromHash());
+  // Periodically refresh totals while on vote page
+  setInterval(async ()=>{
+    if(document.getElementById("page-vote").classList.contains("active")){
+      await loadResults();
+      renderSchedule();
+    }
+  }, 15000);
+})();
 </script>
-
 </body>
 </html>
