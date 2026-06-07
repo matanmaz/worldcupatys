@@ -276,11 +276,10 @@
       🎉 <strong>Thanks!</strong> Your info is on its way. We'll be in touch soon. (First-time note: the very first form submission triggers a one-time confirmation email — check your inbox if you don't hear back.)
     </div>
 
-    <form class="vol" id="vol-form" action="https://formsubmit.co/mazursky@gmail.com" method="POST">
+    <form class="vol" id="vol-form" action="https://formsubmit.co/ajax/mazursky@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New World Cup @ YS volunteer signup!">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="#volunteer?ok=1">
       <input type="text" name="_honey" style="display:none">
 
       <div>
@@ -716,6 +715,39 @@ if(location.search.includes("ok=1")){
     }
   }, 15000);
 })();
+  //AJAX
+  document.querySelectorAll('form.vol').forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      const success = form.parentElement.querySelector('.success');
+      const data = new FormData(form);
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Sending…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+        const json = await res.json();
+        if (json.success === 'true' || json.success === true) {
+          form.reset();
+          form.style.display = 'none';
+          if (success) {
+            success.style.display = 'block';
+            success.textContent = '🎉 Thanks for signing up! We\'ll be in touch soon.';
+          }
+        } else {
+          throw new Error(json.message || 'Submission failed');
+        }
+      } catch (err) {
+        alert('Sorry, something went wrong: ' + err.message + '\nPlease email mazursky@gmail.com directly.');
+        btn.disabled = false;
+        btn.textContent = 'Sign me up';
+      }
+    });
+  });
 </script>
 </body>
 </html>
