@@ -260,7 +260,11 @@ function renderSchedule(){
     });
   } else { // Sort by date
     // Sort matches chronologically
-    const scheduleByDate = [...SCHEDULE].sort((a, b) => new Date(`2026 ${a.date.split(' ')[1]} ${a.date.split(' ')[2]}`) - new Date(`2026 ${b.date.split(' ')[1]} ${b.date.split(' ')[2]}`));
+    const scheduleByDate = [...SCHEDULE].sort((a, b) => {
+      const timeA = new Date(`2026 ${a.date.split(' ')[1]} ${a.date.split(' ')[2]} ${a.time}`);
+      const timeB = new Date(`2026 ${b.date.split(' ')[1]} ${b.date.split(' ')[2]} ${b.time}`);
+      return timeA - timeB;
+    });
     let currentDate = '';
     
     out.push('<table class="matches">');
