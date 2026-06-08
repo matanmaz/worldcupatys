@@ -699,14 +699,6 @@ async function initAdmin(){
 }
 document.getElementById("admin-login-form").addEventListener("submit", async (e)=>{
   e.preventDefault();
-  if (form.id === 'subscribe-form') {
-    const email = form.querySelector('[name=email]').value.trim();
-    const phone = form.querySelector('[name=phone]').value.trim();
-    if (!email && !phone) {
-      alert('Please give us either an email or a phone number so we can reach you.');
-      return;
-    }
-  }
   const key = document.getElementById("admin-key").value.trim();
   const ok = await loadAdmin(key);
   if(ok) sessionStorage.setItem("wcys_admin_key", key);
@@ -792,6 +784,14 @@ if(location.search.includes("ok=1")){
   document.querySelectorAll('form.vol').forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (form.id === 'subscribe-form') {
+        const email = form.querySelector('[name=email]').value.trim();
+        const phone = form.querySelector('[name=phone]').value.trim();
+        if (!email && !phone) {
+          alert('Please give us either an email or a phone number so we can reach you.');
+          return;
+        }
+      }
       const btn = form.querySelector('button[type=submit]');
       const success = form.parentElement.querySelector('.success');
       const data = new FormData(form);
