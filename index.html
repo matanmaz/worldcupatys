@@ -784,8 +784,8 @@ if(location.search.includes("ok=1")){
   document.querySelectorAll('form.vol').forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      // FIX: Add validation for the subscribe form here
+  
+      // Validation for the subscribe form
       if (form.id === 'subscribe-form') {
         const email = form.querySelector('[name=email]').value.trim();
         const phone = form.querySelector('[name=phone]').value.trim();
@@ -794,32 +794,46 @@ if(location.search.includes("ok=1")){
           return; // Stop the form submission
         }
       }
-
+  
       const btn = form.querySelector('button[type=submit]');
       const success = form.parentElement.querySelector('.success');
       const data = new FormData(form);
-      const originalButtonText = btn.innerHTML; // Store original button text
+      const originalButtonText = btn.innerHTML;
       btn.disabled = true;
       btn.innerHTML = '<span class="spinner"></span> Sending…';
+  
       try {
         const res = await fetch(form.action, {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
           body: data
         });
-        const json = await res.json();
-        if (json.success === 'true' || json.success === true) {
-          form.reset();
-          form.style.display = 'none';
-          if (success) {
-            success.style.display = 'block';
-            success.textContent = '🎉 Thanks for signing up! We\'ll be in touch soon.';
+  
+        // Check if the response is JSON or something else (like a redirect)
+        const contentType = res.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          // It's a JSON response, process it
+          const json = await res.json();
+          if (json.success === 'true' || json.success === true) {
+            form.reset();
+            form.style.display = 'none';
+            if (success) {
+              success.style.display = 'block';
+              success.textContent = '🎉 Thanks for signing up! We\'ll be in touch soon.';
+            }
+          } else {
+            // The service returned a JSON error
+            throw new Error(json.message || 'The server reported an error.');
           }
         } else {
-          throw new Error(json.message || 'Submission failed');
+          // It's likely a redirect for CAPTCHA or email confirmation.
+          // Let the user complete the action.
+          // The service will then redirect back with a success parameter.
+          window.location.href = form.action.replace('/ajax/', '/');
+          return;
         }
       } catch (err) {
-        alert('Sorry, something went wrong: ' + err.message + '\nPlease email mazursky@gmail.com directly.');
+        alert('Sorry, something went wrong: ' + err.message + '\nPlease try again or email mazursky@gmail.com directly.');
         btn.disabled = false;
         btn.innerHTML = originalButtonText; // Restore original button text
       }
