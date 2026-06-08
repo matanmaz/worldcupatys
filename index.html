@@ -784,17 +784,21 @@ if(location.search.includes("ok=1")){
   document.querySelectorAll('form.vol').forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // FIX: Add validation for the subscribe form here
       if (form.id === 'subscribe-form') {
         const email = form.querySelector('[name=email]').value.trim();
         const phone = form.querySelector('[name=phone]').value.trim();
         if (!email && !phone) {
-          alert('Please give us either an email or a phone number so we can reach you.');
-          return;
+          alert('Please provide either an email or a phone number so we can reach you.');
+          return; // Stop the form submission
         }
       }
+
       const btn = form.querySelector('button[type=submit]');
       const success = form.parentElement.querySelector('.success');
       const data = new FormData(form);
+      const originalButtonText = btn.innerHTML; // Store original button text
       btn.disabled = true;
       btn.innerHTML = '<span class="spinner"></span> Sending…';
       try {
@@ -817,10 +821,11 @@ if(location.search.includes("ok=1")){
       } catch (err) {
         alert('Sorry, something went wrong: ' + err.message + '\nPlease email mazursky@gmail.com directly.');
         btn.disabled = false;
-        btn.textContent = 'Sign me up';
+        btn.innerHTML = originalButtonText; // Restore original button text
       }
     });
   });
 </script>
 </body>
 </html>
+
