@@ -110,6 +110,38 @@
   .leaderboard th,.leaderboard td{padding:.55rem .75rem;text-align:left;border-bottom:1px solid var(--line)}
   .leaderboard th{background:#f7f1de;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
   .bar{display:inline-block;height:10px;background:var(--grass);border-radius:5px;vertical-align:middle;margin-right:.4rem}
+
+  /* ---------- FIX: Responsive Table for Mobile ---------- */
+  @media screen and (max-width: 768px) {
+    table.matches thead {
+      display: none; /* Hide table headers on mobile */
+    }
+    table.matches tr {
+      display: block;
+      border-bottom: 2px solid var(--grass);
+      margin-bottom: 1.5rem;
+    }
+    table.matches td {
+      display: block;
+      text-align: right;
+      border-bottom: 1px dotted var(--line);
+      padding: .5rem .8rem;
+    }
+    table.matches td:last-child {
+      border-bottom: none;
+    }
+    table.matches td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: .85rem;
+      text-transform: uppercase;
+    }
+    .vote-cell {
+      white-space: normal; /* Allow wrapping in the vote cell */
+    }
+  }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -667,13 +699,13 @@ function renderSchedule(){
         const total = SERVER_RESULTS[m.id]||0;
         const noPoints = (POINTS_BUDGET - MY_SPENT) <= 0;
         return `<tr>
-          <td>${m.date}</td>
-          <td>${m.time}</td>
-          <td class="match-cell">${flag(m.teamA)} ${m.teamA} <span style="opacity:.5">vs</span> ${flag(m.teamB)} ${m.teamB}
+          <td data-label="Date">${m.date}</td>
+          <td data-label="Time (ET)">${m.time}</td>
+          <td data-label="Match" class="match-cell">${flag(m.teamA)} ${m.teamA} <span style="opacity:.5">vs</span> ${flag(m.teamB)} ${m.teamB}
             ${total>0?`<span class="total-badge">${total} 🗳️</span>`:""}
           </td>
-          <td class="small">${m.venue}</td>
-          <td class="vote-cell">
+          <td data-label="Venue" class="small">${m.venue}</td>
+          <td data-label="Your Vote" class="vote-cell">
             <button class="vote-btn minus" data-id="${m.id}" data-delta="-1" ${myCount<=0?"disabled":""} aria-label="Downvote">−</button>
             <span class="vote-count">${myCount}</span>
             <button class="vote-btn" data-id="${m.id}" data-delta="1" ${noPoints?"disabled":""} aria-label="Upvote">+</button>
@@ -816,4 +848,3 @@ document.querySelectorAll('form.vol').forEach(form => {
 </script>
 </body>
 </html>
-
