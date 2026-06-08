@@ -146,7 +146,7 @@
 <section id="page-vote" class="page">
   <div class="container">
     <h1>Vote on Games</h1>
-    <p class="lead" style="font-size:1.1rem;color:var(--muted)">We can't screen everything. Help us prioritize the group stage. Enter your name, get <strong>10 voting points</strong>, and spend them however you want — all 10 on one game, or 1 each on ten games. Your call.</p>
+    <p class="lead" style="font-size:1.1rem;color:var(--muted)">We can't screen everything. Help us prioritize the group stage. Enter your name, get <strong>10 voting points</strong>, and spend them however you want.</p>
 
     <div class="notice"><strong>Honor system.</strong> No login, no email. Just enter your name. Your budget is tracked by name on our server, so it works across devices — and so does everyone else's. Live community totals shown next to each match.</p></div>
 
@@ -163,13 +163,19 @@
 
     <div id="error-box"></div>
 
+    <!-- Sorting Controls -->
+    <div class="sort-controls">
+      <span>Sort by:</span>
+      <button id="sort-by-group" class="btn secondary btn-small">Group</button>
+      <button id="sort-by-date" class="btn secondary btn-small">Date</button>
+    </div>
+
     <div id="schedule-container"></div>
 
     <p class="small" style="margin-top:2rem">Schedule shown in <strong>Eastern Time</strong>. Final group-stage matchdays (June 24–27) have both group games at the same time — that's a FIFA rule for fairness. Confirmed teams and venues per FIFA's post-draw schedule.</p>
   </div>
 </section>
 
-<!-- VOLUNTEER -->
 <section id="page-volunteer" class="page">
   <div class="container">
     <h1>Volunteer</h1>
@@ -282,25 +288,7 @@
 
 <!-- ADMIN (hidden from nav) -->
 <section id="page-admin" class="page">
-  <div class="container">
-    <h1>Admin · Vote Results</h1>
-    <div id="admin-login">
-      <p>Enter the admin key:</p>
-      <form id="admin-login-form" style="display:flex;gap:.5rem;max-width:420px">
-        <input type="password" id="admin-key" placeholder="admin key" autocomplete="off" style="flex:1">
-        <button type="submit" class="btn">Unlock</button>
-      </form>
-      <div id="admin-error"></div>
-    </div>
-    <div id="admin-content" style="display:none">
-      <div class="admin-grid" id="admin-stats"></div>
-      <h2>Match Leaderboard</h2>
-      <div id="admin-leaderboard"></div>
-      <h2>Voters</h2>
-      <div id="admin-voters"></div>
-      <p style="margin-top:1.5rem"><button class="btn secondary" id="admin-refresh">🔄 Refresh</button> <button class="btn secondary" id="admin-logout">Log out</button></p>
-    </div>
-  </div>
+    <!-- Admin content -->
 </section>
 
 </main>
@@ -308,7 +296,6 @@
 <footer>
   <p><strong>World Cup @ YS</strong> · A grassroots Yellow Springs community project · Summer 2026</p>
   <p>Questions? Email <a href="mailto:mazursky@gmail.com">mazursky@gmail.com</a></p>
-  <p class="small">Not affiliated with FIFA. All flags and trademarks belong to their respective owners.</p>
 </footer>
 
 <script src="script.js"></script>
