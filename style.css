@@ -61,11 +61,13 @@ textarea{min-height:110px;resize:vertical}
 .checks input{margin-top:.2rem}
 .small{font-size:.88rem;color:var(--muted)}
 
+/* --- Vote & Table Styles --- */
 .vote-controls{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.25rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;position:sticky;top:64px;z-index:10}
 .points-badge{background:var(--ink);color:var(--sun);padding:.4rem .8rem;border-radius:999px;font-weight:700}
 .group{margin:1.5rem 0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .group h3{margin:0;padding:.85rem 1rem;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center}
 .group h3 .teams{font-size:.85rem;font-weight:400;opacity:.85;font-family:'Inter',sans-serif;letter-spacing:0}
+h3.date-header{background:var(--paper);color:var(--muted);padding-top:1rem;border-bottom:2px solid var(--line);margin-bottom:0.5rem;font-size:1.1rem; text-align: left;}
 table.matches{width:100%;border-collapse:collapse;font-size:.95rem}
 table.matches th,table.matches td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid var(--line)}
 table.matches th{background:#f7f1de;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
@@ -79,6 +81,12 @@ table.matches tr:last-child td{border-bottom:none}
 .total-badge{display:inline-block;background:var(--grass);color:#fff;padding:.15rem .55rem;border-radius:999px;font-size:.78rem;font-weight:700;margin-left:.4rem}
 .name-input{max-width:280px}
 
+/* --- Sorting Controls --- */
+.sort-controls { margin: 1.5rem 0 1rem; display:flex; align-items:center; gap: 0.5rem; flex-wrap: wrap; }
+.btn.btn-small { padding: .4rem .8rem; font-size: .85rem; }
+.sort-controls .btn.active { background: var(--grass); color: #fff; border-color: var(--grass); }
+
+/* --- Pillars & Footer --- */
 .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
 .pillar{background:#fff;border-radius:12px;padding:1.25rem;border:1px solid var(--line);text-align:center}
 .pillar .emoji{font-size:2.2rem;display:block;margin-bottom:.3rem}
@@ -86,6 +94,7 @@ table.matches tr:last-child td{border-bottom:none}
 footer{background:var(--ink);color:#cfd6df;padding:2rem 1.25rem;text-align:center;font-size:.9rem;margin-top:3rem}
 footer a{color:var(--sun)}
 
+/* --- UI Utilities --- */
 .flags{display:flex;justify-content:center;gap:.25rem;font-size:1.5rem;margin:1rem 0;flex-wrap:wrap}
 .notice{background:#fff8dc;border-left:4px solid var(--sun);padding:.85rem 1rem;border-radius:6px;margin:1rem 0;font-size:.95rem}
 .success{background:#e8f5e9;border-left:4px solid var(--grass);padding:.85rem 1rem;border-radius:6px;margin:1rem 0;display:none}
@@ -93,7 +102,7 @@ footer a{color:var(--sun)}
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid #ccc;border-top-color:var(--ink);border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* Admin */
+/* --- Admin --- */
 .admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:1rem 0}
 .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem;text-align:center}
 .stat .n{font-size:2rem;font-weight:700;color:var(--sky);display:block}
@@ -103,7 +112,7 @@ footer a{color:var(--sun)}
 .leaderboard th{background:#f7f1de;font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
 .bar{display:inline-block;height:10px;background:var(--grass);border-radius:5px;vertical-align:middle;margin-right:.4rem}
 
-/* ---------- FIX: Responsive Table for Mobile ---------- */
+/* --- Responsive Table for Mobile --- */
 @media screen and (max-width: 768px) {
   table.matches thead {
     display: none; /* Hide table headers on mobile */
@@ -112,15 +121,17 @@ footer a{color:var(--sun)}
     display: block;
     border-bottom: 2px solid var(--grass);
     margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
   table.matches td {
     display: block;
     text-align: right;
     border-bottom: 1px dotted var(--line);
-    padding: .5rem .8rem;
+    padding: .6rem .2rem;
   }
   table.matches td:last-child {
     border-bottom: none;
+    padding-bottom: 0;
   }
   table.matches td::before {
     content: attr(data-label);
@@ -132,5 +143,12 @@ footer a{color:var(--sun)}
   }
   .vote-cell {
     white-space: normal; /* Allow wrapping in the vote cell */
+  }
+  .group { border: none; border-radius: 0; }
+  .group h3 { margin-bottom: 1rem; border-radius: 6px; }
+  tr:has(h3.date-header) {
+      display: revert; /* Let date headers be full-width on mobile */
+      border: none;
+      margin: 0;
   }
 }
