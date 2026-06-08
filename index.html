@@ -343,7 +343,7 @@
   </div>
 </section>
 
-<section id="subscribe" class="page">
+<section id="page-subscribe" class="page">
   <div class="container">
     <h1>Stay in the Loop</h1>
     <p class="lead">Get occasional updates about World Cup @ YS — schedule announcements, watch party confirmations, potluck themes, and last-minute "the DJ is set up, come on down" texts. We won't spam you and we won't share your info.</p>
@@ -524,7 +524,7 @@ const SCHEDULE = [
 const POINTS_BUDGET = 10;
 
 // ---------- Routing ----------
-const ROUTES = ["home","party","vote","volunteer","admin"];
+const ROUTES = ["home","party","vote","volunteer","subscribe","admin"];
 function showPage(route){
   if(!ROUTES.includes(route)) route = "home";
   ROUTES.forEach(r=>{
