@@ -729,11 +729,11 @@ function renderSchedule(){
   const container = document.getElementById("schedule-container");
   if(!container) return;
   const groups = {};
-  SCHEDULE.forEach(m=>{ (groups[m.group] = groups[m.group] || []).push(m); });
+  SCHEDULE.filter(isUpcoming).forEach(m=>{ (groups[m.group] = groups[m.group] || []).push(m); });
 
   const out = [];
   Object.keys(groups).sort().forEach(g=>{
-    const matches = groups[g].filter(isUpcoming);
+    const matches = groups[g];
     const teams = [...new Set(matches.flatMap(m=>[m.teamA,m.teamB]))];
     out.push(`<div class="group">
       <h3>Group ${g} <span class="teams">${teams.map(t=>flag(t)+" "+t).join(" · ")}</span></h3>
