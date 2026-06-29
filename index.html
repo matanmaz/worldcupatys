@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>World Cup @ YS — Yellow Springs Watch Parties</title>
-<meta name="description" content="Community watch parties for the 2026 FIFA World Cup in Yellow Springs, Ohio. Volunteer, vote on games, and join the global party at the Bryan Center." />
+<meta name="description" content="Community watch parties for the 2026 FIFA World Cup in Yellow Springs, Ohio. Volunteer, and join the global party at the Bryan Center." />
 <style>
   :root{
     --ink:#0d1b2a; --paper:#fbf7ee; --sun:#f5c518; --grass:#1f7a3a;
@@ -156,7 +156,6 @@
       <ul>
         <li><a href="#home" data-route="home">Home</a></li>
         <li><a href="#party" data-route="party">The Party</a></li>
-        <li><a href="#vote" data-route="vote">Vote on Games</a></li>
         <li><a href="#volunteer" data-route="volunteer">Volunteer</a></li>
         <li><a href="#subscribe" data-route="subscribe">Subscribe</a></li>
       </ul>
@@ -561,7 +560,7 @@ const SCHEDULE = [
 const POINTS_BUDGET = 10;
 
 // ---------- Routing ----------
-const ROUTES = ["home","party","vote","volunteer","subscribe","admin"];
+const ROUTES = ["home","party","volunteer","subscribe","admin"];
 function showPage(route){
   if(!ROUTES.includes(route)) route = "home";
   ROUTES.forEach(r=>{
